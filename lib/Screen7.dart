@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import 'Screen8.dart';
 class Screen7 extends StatefulWidget {
   const Screen7({super.key});
 
@@ -38,17 +41,21 @@ class _Screen7State extends State<Screen7> {
                         borderRadius: BorderRadius.circular(30))),
               ),
               SizedBox(height: 80,),
-              Container(
-                width: 300,
-                height:46 ,
-                decoration: ShapeDecoration(shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),color: Colors.pinkAccent,shadows: [
-                  BoxShadow(
-                    blurRadius: 4,
-                  )
-                ]),
-                child: Center(child: Text('Proceed',style: TextStyle(color: Colors.white,fontSize: 20),)),
+              GestureDetector(onTap:(){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Screen8()));
+              } ,
+                child: Container(
+                  width: 300,
+                  height:46 ,
+                  decoration: ShapeDecoration(shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),color: Colors.pinkAccent,shadows: [
+                    BoxShadow(
+                      blurRadius: 4,
+                    )
+                  ]),
+                  child: Center(child: Text('Proceed',style: TextStyle(color: Colors.white,fontSize: 20),)),
+                ),
               ),
               SizedBox(height: 70,),
               Padding(
