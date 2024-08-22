@@ -174,13 +174,13 @@ class _Screen9State extends State<Screen9> {
                                   child: GestureDetector(
                                     onTap: () {
                                       showModalBottomSheet<void>(
-                                        context: context,
+                                        context: context,backgroundColor: Colors.white,
                                         isScrollControlled: true,
                                         builder: (BuildContext context) {
                                           return StatefulBuilder(
                                             builder: (BuildContext context,
                                                 void Function(void Function()) setState) {
-                                              return SizedBox(
+                                              return Container(color: Colors.white,
                                                 height: 337,
                                                 width: double.infinity,
                                                 child: DefaultTabController(
@@ -207,8 +207,12 @@ class _Screen9State extends State<Screen9> {
                                                               padding: EdgeInsets
                                                                   .only(
                                                                   right: 12.0),
-                                                              child: Icon(
-                                                                  Icons.close),
+                                                              child: GestureDetector(onTap: (){
+                                                                Navigator.of(context).pop();
+                                                              },
+                                                                child: Icon(
+                                                                    Icons.close),
+                                                              ),
                                                             )
                                                           ],
                                                         ),
@@ -219,13 +223,13 @@ class _Screen9State extends State<Screen9> {
                                                         indicatorSize: TabBarIndicatorSize
                                                             .tab,
                                                         indicator: BoxDecoration(
-                                                            color: Colors.red,
+                                                            color: Colors.pink,
                                                             borderRadius: BorderRadius
                                                                 .circular(20)
                                                         ),
-                                                        labelColor: Colors.black,
+                                                        labelColor: Colors.white,
                                                         dividerColor: Colors
-                                                            .black,
+                                                            .white,
                                                         tabs: [
                                                           Tab(
                                                               icon: Text(
